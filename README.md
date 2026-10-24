@@ -9,7 +9,7 @@ Réalisé par **ANTON NELCON Steve**.
 Lien du jeu: https://an-steve.github.io/CyberRunner3D/
 ---
 
-## 🎮 Présentation
+##  Présentation
 
 CyberRunner 3D est un jeu de plateforme 3D à la troisième personne, développé en **HTML / JavaScript** avec la bibliothèque **[Three.js](https://threejs.org/)**. Aucune installation n'est nécessaire : il suffit d'un navigateur récent compatible WebGL.
 
@@ -17,9 +17,9 @@ CyberRunner 3D est un jeu de plateforme 3D à la troisième personne, développ�
 
 ---
 
-## ✨ Fonctionnalités
+##  Fonctionnalités
 
-- 🤖 **4 héros jouables**, chacun avec ses propres atouts
+-  **4 héros jouables**, chacun avec ses propres atouts
 - 🪙 **10 pièces** à collecter
 - 👾 **Ennemis** à écraser en leur sautant dessus
 - 🚩 **Drapeaux de checkpoint** : en cas de chute, on repart du dernier drapeau activé
@@ -32,18 +32,18 @@ CyberRunner 3D est un jeu de plateforme 3D à la troisième personne, développ�
 
 ---
 
-## 🤖 Les héros
+##  Les héros
 
 | Héros | Spécialité | Détails |
 |-------|-----------|---------|
-| 🤖 **CyberBot** | ⚖️ Équilibré | Polyvalent et agile, double saut, 3 vies |
-| 🥷 **Shadow Ninja** | 🥷 Triple saut | Plus rapide, triple saut aérien, 3 vies |
-| 🛡️ **Giga Titan** | ❤️ 5 vies max | Colosse blindé, plus lent mais plus résistant |
-| ⚡ **Neon Flash** | ⚡ Hyper vitesse | Vitesse de pointe exceptionnelle et saut renforcé, 3 vies |
+| 🤖 **CyberBot** |  Équilibré | Polyvalent et agile, double saut, 3 vies |
+| 🥷 **Shadow Ninja** |  Triple saut | Plus rapide, triple saut aérien, 3 vies |
+| 🛡️ **Giga Titan** |  5 vies max | Colosse blindé, plus lent mais plus résistant |
+| ⚡ **Neon Flash** |  Hyper vitesse | Vitesse de pointe exceptionnelle et saut renforcé, 3 vies |
 
 ---
 
-## 🌌 Les décors
+##  Les décors
 
 | Décor | Ambiance |
 |-------|----------|
@@ -54,7 +54,7 @@ CyberRunner 3D est un jeu de plateforme 3D à la troisième personne, développ�
 
 ---
 
-## 🕹️ Contrôles
+##  Contrôles
 
 | Action | Touche |
 |--------|--------|
@@ -67,11 +67,11 @@ CyberRunner 3D est un jeu de plateforme 3D à la troisième personne, développ�
 
 Des boutons en haut de l'écran permettent aussi de changer de ciel, de héros, de verrouiller la souris (mode « Vue Libre » / FPS-TPS) et de couper le son.
 
-💡 **Astuce :** sautez sur les ennemis 👾 pour les vaincre, mais attention à ne pas les toucher de côté, vous perdriez une vie !
+ **Astuce :** sautez sur les ennemis 👾 pour les vaincre, mais attention à ne pas les toucher de côté, vous perdriez une vie !
 
 ---
 
-## 🚀 Lancer le jeu
+##  Lancer le jeu
 
 ### Méthode rapide (Windows)
 
@@ -91,7 +91,7 @@ C'est tout ! Aucun moteur de jeu, compilateur ou dépendance à installer.
 
 ---
 
-## 📁 Structure du projet
+##  Structure du projet
 
 ```
 CyberRunner3D/
@@ -104,7 +104,7 @@ CyberRunner3D/
 
 ---
 
-## 🛠️ Technologies utilisées
+##  Technologies utilisées
 
 - **HTML5 / CSS3** : interface et HUD
 - **JavaScript** (sans framework) : logique du jeu
@@ -116,7 +116,7 @@ CyberRunner3D/
 ##  Auteur
 
 **ANTON NELCON Steve**
-
+*Mini projet personnel*
 ---
 
 Amusez-vous bien et bonne course ! 🏃⚡
