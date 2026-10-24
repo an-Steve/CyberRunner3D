@@ -1,81 +1,119 @@
-# 🎮 MyGame - Projet Unreal Engine 5
+# ⚡ CyberRunner 3D : L'Aventure Céleste
 
-Bienvenue dans votre premier projet de jeu vidéo créé avec **Unreal Engine 5** !
+Jeu d'arcade et de plateforme en 3D qui se joue directement dans le navigateur. Traversez des îles flottantes, ramassez les pièces, écrasez les ennemis et atteignez le portail final !
 
----
-
-## 📁 Ce qui a été créé dans ce dossier
-
-Le projet est entièrement configuré en C++ et Blueprint avec les éléments suivants :
-
-1. **`MyGame.uproject`** : Le fichier principal du projet Unreal Engine.
-2. **`Source/MyGame/MyGameCharacter`** :
-   - Contrôleur complet du personnage à la 3ème personne.
-   - Système de santé (`CurrentHealth` / `MaxHealth`).
-   - Système de score / pièces ramassées (`Score`).
-   - Mécanique de sprint (vitesse normale à 600, sprint à 1000).
-   - Caméra dynamique avec bras rétractable (`SpringArm` + `CameraComponent`).
-3. **`Source/MyGame/CollectibleItem`** :
-   - Objet ramassable en 3D qui tourne sur lui-même (`RotatingMovementComponent`).
-   - Détection de collision (sphère de trigger) qui ajoute des points au joueur et affiche un message à l'écran.
-4. **`Source/MyGame/MovingPlatform`** :
-   - Plateforme mobile se déplaçant automatiquement en boucle (idéal pour les parcours de saut / plateformer).
-5. **`Source/MyGame/MyGameGameMode`** :
-   - Mode de jeu configuré pour spawner automatiquement votre personnage.
-6. **`Config/`** :
-   - Paramètres du moteur et touches configurées pour claviers **AZERTY** (Z, Q, S, D) et **QWERTY** (W, A, S, D), ainsi que les **manettes**.
+Réalisé par **ANTON NELCON Steve**.
 
 ---
 
-## 🛠️ Prérequis indispensables
+## 🎮 Présentation
 
-Unreal Engine n'est pas un simple script, c'est un moteur complet de plusieurs gigaoctets. Voici les deux éléments gratuits nécessaires pour le faire tourner sur votre PC :
+CyberRunner 3D est un jeu de plateforme 3D à la troisième personne, développé en **HTML / JavaScript** avec la bibliothèque **[Three.js](https://threejs.org/)**. Aucune installation n'est nécessaire : il suffit d'un navigateur récent compatible WebGL.
 
-1. **Epic Games Launcher & Unreal Engine 5** :
-   - Téléchargez le lanceur sur [unrealengine.com](https://www.unrealengine.com/).
-   - Ouvrez Epic Games Launcher -> Allez dans l'onglet **Unreal Engine** -> **Bibliothèque**.
-   - Cliquez sur le `+` jaune et installez la version la plus récente (UE 5.4 ou 5.3).
-
-2. **Visual Studio 2022 Community** (requis pour compiler le code C++) :
-   - Téléchargez Visual Studio Community (gratuit) sur [visualstudio.microsoft.com](https://visualstudio.microsoft.com/).
-   - Lors de l'installation, cochez impérativement la case : **"Développement de jeux en C++"** (*Game development with C++*).
+**Objectif :** ramasser les **10 pièces** du niveau, éviter les dangers, vaincre les ennemis et franchir le **portail final**, le tout le plus vite possible.
 
 ---
 
-## 🚀 Comment exécuter le jeu (Pas à pas)
+## ✨ Fonctionnalités
 
-### Option 1 : Ouvrir directement le projet
-
-1. Faites un clic droit sur le fichier **`MyGame.uproject`**.
-2. Cliquez sur **"Generate Visual Studio project files"** (cela va créer le fichier de solution `MyGame.sln`).
-3. Double-cliquez sur **`MyGame.uproject`** : Unreal Engine va compiler les modules C++ et ouvrir l'éditeur graphique !
-
-*(Note : si vous avez une version différente d'Unreal installée, faites clic droit sur `MyGame.uproject` -> **"Switch Unreal Engine version..."** et choisissez votre version).*
-
-### Option 2 : Depuis Visual Studio 2022
-
-1. Ouvrez le fichier **`MyGame.sln`** généré dans Visual Studio 2022.
-2. En haut, assurez-vous que la configuration est bien sur **`Development Editor`** et la plateforme sur **`Win64`**.
-3. Appuyez sur **F5** (ou `Ctrl + F5`) pour lancer la compilation et démarrer l'éditeur Unreal.
+- 🤖 **4 héros jouables**, chacun avec ses propres atouts
+- 🪙 **10 pièces** à collecter
+- 👾 **Ennemis** à écraser en leur sautant dessus
+- 🚩 **Drapeaux de checkpoint** : en cas de chute, on repart du dernier drapeau activé
+- 🧱 **Plateformes mobiles** et **bouncepads** (tremplins)
+- 🎁 **Power-ups** : boost de vitesse, bouclier et aimant à pièces
+- 🌌 **4 décors de ciel**, modifiables en cours de partie
+- ⏱️ **Chronomètre**, compteur de vies, de pièces et d'ennemis vaincus
+- 🔊 **Effets sonores** générés avec la Web Audio API, avec bouton pour couper le son
+- 🏆 Écran de victoire avec récapitulatif (pièces, ennemis, temps)
 
 ---
 
-## 🕹️ Contrôles du jeu
+## 🤖 Les héros
 
-| Action | Clavier AZERTY | Clavier QWERTY | Manette |
-|---|---|---|---|
-| **Avancer / Reculer** | **Z / S** | **W / S** | Stick gauche (Haut / Bas) |
-| **Aller à gauche / droite** | **Q / D** | **A / D** | Stick gauche (Gauche / Droite) |
-| **Tourner la caméra** | **Souris** | **Souris** | Stick droit |
-| **Sauter** | **Espace** | **Espace** | Bouton A / Croix (Croix du bas) |
-| **Sprinter** | **Shift Gauche** | **Shift Gauche** | Pression stick gauche (L3) |
+| Héros | Spécialité | Détails |
+|-------|-----------|---------|
+| 🤖 **CyberBot** | ⚖️ Équilibré | Polyvalent et agile, double saut, 3 vies |
+| 🥷 **Shadow Ninja** | 🥷 Triple saut | Plus rapide, triple saut aérien, 3 vies |
+| 🛡️ **Giga Titan** | ❤️ 5 vies max | Colosse blindé, plus lent mais plus résistant |
+| ⚡ **Neon Flash** | ⚡ Hyper vitesse | Vitesse de pointe exceptionnelle et saut renforcé, 3 vies |
 
 ---
 
-## 📦 Comment créer un exécutable autonome (.exe) pour vos amis
+## 🌌 Les décors
 
-Lorsque votre niveau est prêt dans Unreal Editor :
-1. Allez dans le menu supérieur : **Platforms** -> **Windows**.
-2. Cliquez sur **Package Project**.
-3. Choisissez le dossier où enregistrer le jeu compilé.
-4. Unreal générera un dossier avec un fichier `MyGame.exe` autonome jouable sans avoir besoin d'ouvrir l'éditeur !
+| Décor | Ambiance |
+|-------|----------|
+| 🌌 **Nébuleuse Cosmique** | Ciel étoilé avec planète à anneaux |
+| 🌅 **Crépuscule Doré** | Grand soleil couchant |
+| 🌠 **Aurore Boréale** | Ciel étoilé aux teintes vertes |
+| ☀️ **Ciel Céleste Azur** | Plein jour, ciel bleu |
+
+---
+
+## 🕹️ Contrôles
+
+| Action | Touche |
+|--------|--------|
+| **Se déplacer** | `Z` `Q` `S` `D` |
+| **Sauter** (double saut possible) | `Espace` |
+| **Changer de ciel** | `V` |
+| **Changer de héros** | `C` |
+| **Réapparaître au dernier drapeau** | `R` |
+| **Orienter la caméra** | Souris |
+
+Des boutons en haut de l'écran permettent aussi de changer de ciel, de héros, de verrouiller la souris (mode « Vue Libre » / FPS-TPS) et de couper le son.
+
+💡 **Astuce :** sautez sur les ennemis 👾 pour les vaincre, mais attention à ne pas les toucher de côté, vous perdriez une vie !
+
+---
+
+## 🚀 Lancer le jeu
+
+### Méthode rapide (Windows)
+
+Double-cliquez sur **`Lancer_Le_Jeu.bat`**.
+
+### Méthode universelle (Windows, macOS, Linux)
+
+1. Téléchargez ou clonez le dépôt :
+   ```bash
+   git clone https://github.com/an-Steve/CyberRunner3D.git
+   ```
+2. Ouvrez le fichier **`index.html`** dans votre navigateur (Chrome, Edge, Firefox…).
+
+C'est tout ! Aucun moteur de jeu, compilateur ou dépendance à installer.
+
+> 🌐 `three.min.js` est fourni dans le dépôt, donc le jeu fonctionne hors ligne. Si le fichier local est absent, le jeu bascule automatiquement sur la version hébergée par cdnjs (Three.js r128), ce qui demande alors une connexion Internet.
+
+---
+
+## 📁 Structure du projet
+
+```
+CyberRunner3D/
+├── index.html          # Le jeu complet (interface, logique, sons)
+├── three.min.js        # Bibliothèque Three.js (rendu 3D)
+├── Lancer_Le_Jeu.bat   # Lanceur rapide pour Windows
+├── .gitignore
+└── README.md
+```
+
+---
+
+## 🛠️ Technologies utilisées
+
+- **HTML5 / CSS3** : interface et HUD
+- **JavaScript** (sans framework) : logique du jeu
+- **[Three.js](https://threejs.org/)** : rendu 3D WebGL
+- **Web Audio API** : effets sonores
+
+---
+
+##  Auteur
+
+**ANTON NELCON Steve**
+
+---
+
+Amusez-vous bien et bonne course ! 🏃⚡
